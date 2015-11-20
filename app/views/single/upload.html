@@ -1,0 +1,25 @@
+{{set . "title" "Upload Single File"}}
+{{template "header.html" .}}
+
+<div class="container">
+	<div class="row">
+		<div class="span6">
+			<form method="post" action="{{url "Single.HandleUpload"}}" enctype="multipart/form-data">
+				<p>
+					<label for="csvFile"><strong>Put here:</strong></label>
+					<input type="file" name="csvFile" id="csvFile" class="span6">
+				</p>
+				<hr>
+				<input type="submit" value="Upload" class="btn btn-large btn-success">
+			</form>
+		</div>
+		<div class="span6">
+			<i>
+				Please upload sheets, the data will be processed and import to BI database
+				Maximum file size is 15 MB.
+			</i>
+		</div>
+	</div>
+</div>
+
+{{template "footer.html" .}}
